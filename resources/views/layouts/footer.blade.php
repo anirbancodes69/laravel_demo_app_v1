@@ -1,139 +1,254 @@
-</main>
+</div>
+<!-- Main Content Wrapper End -->
 
-<!-- FOOTER SECTION START -->
-<footer
-    class="bg-edblue relative z-[1] before:absolute before:inset-0 before:-z-[1] before:bg-[url('../assets/img/footer-bg.jpg')] before:opacity-[7%] before:bg-no-repeat before:bg-cover before:bg-center text-white">
-    <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
-        <!-- footer top -->
-        <div class="flex flex-wrap justify-between gap-[35px] pt-[100px] pb-[58px] border-b border-white/20">
-            <!-- footer about -->
-            <div class="max-w-[370px] xxs:max-w-full">
-                <a href="index.html" class="inline-block mb-[23px]"><img src="{{ asset('/') }}assets/img/logo-light.png"
-                        alt="logo"></a>
-                <p class="text-[#D9D9D9] mb-[19px]">Nullam interdum libero vitae pretium aliquam donec nibh purus
-                    laoreet in ullamcorper vel malesuada sit amet enim.</p>
-
-                <ul class="space-y-[17px]">
-                    <li class="flex items-center gap-[8px]">
-                        <span class="icon"><img src="{{ asset('/') }}assets/img/call-icon-yellow.svg" alt="icon"></span>
-                        <a href="tel:+6108-666-0112" class="hover:text-edyellow">+6108-666-0112</a>
-                    </li>
-
-                    <li class="flex items-center gap-[8px]">
-                        <span class="icon"><img src="{{ asset('/') }}assets/img/message-yellow.svg" alt="icon"></span>
-                        <a href="mailto:info@gmail.com" class="hover:text-edyellow">info@gmail.com</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- footer widget -->
-            <div>
-                <h6
-                    class="font-semibold text-[18px] pb-[15px] mb-[30px] relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-[20px] before:bg-edyellow after:absolute after:bottom-0 after:left-[30px] after:h-[1.5px] after:w-[63px] after:bg-white">
-                    Quick Links</h6>
-
-                <div class="space-y-[18px]">
-                    <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span
-                            class="icon"><img src="{{ asset('/') }}assets/img/double-arrow.svg" alt="icon"></span>
-                        Edutics About</a>
-                    <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span
-                            class="icon"><img src="{{ asset('/') }}assets/img/double-arrow.svg" alt="icon"></span>
-                        Contact Us</a>
-                    <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span
-                            class="icon"><img src="{{ asset('/') }}assets/img/double-arrow.svg" alt="icon"></span>
-                        Blog & News</a>
-                    <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span
-                            class="icon"><img src="{{ asset('/') }}assets/img/double-arrow.svg" alt="icon"></span>
-                        FAQ’S</a>
-                    <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span
-                            class="icon"><img src="{{ asset('/') }}assets/img/double-arrow.svg" alt="icon"></span>
-                        Login /
-                        Register</a>
+<!-- Footer Start -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="footer-widget logo-widget">
+                        <img src="{{ asset('/') }}assets/img/logo/logo.png" alt="Footer Logo">
+                    </div>
                 </div>
-            </div>
-
-            <!-- footer widget -->
-            <div>
-                <h6
-                    class="font-semibold text-[18px] pb-[15px] mb-[30px] relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-[20px] before:bg-edyellow after:absolute after:bottom-0 after:left-[30px] after:h-[1.5px] after:w-[63px] after:bg-white">
-                    Main Navigation</h6>
-
-                <div class="space-y-[18px]">
-                    <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span
-                            class="icon"><img src="{{ asset('/') }}assets/img/double-arrow.svg" alt="icon"></span>
-                        Admission</a>
-                    <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span
-                            class="icon"><img src="{{ asset('/') }}assets/img/double-arrow.svg" alt="icon"></span>
-                        Research</a>
-                    <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span
-                            class="icon"><img src="{{ asset('/') }}assets/img/double-arrow.svg" alt="icon"></span>
-                        Academics</a>
-                    <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span
-                            class="icon"><img src="{{ asset('/') }}assets/img/double-arrow.svg" alt="icon"></span>
-                        Student Life</a>
-                    <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span
-                            class="icon"><img src="{{ asset('/') }}assets/img/double-arrow.svg" alt="icon"></span>
-                        Conferences</a>
+                <div class="col-md-3 offset-md-2 col-lg-2 offset-lg-3">
+                    <div class="footer-widget menu-one-widget">
+                        <ul class="footer-menu">
+                            <li class="footer-menu__item"><a class="footer-menu__link" href="archive.html">ARCHIVE
+                                    NOVEMBER</a></li>
+                            <li class="footer-menu__item"><a class="footer-menu__link" href="archive.html">TRENDING
+                                    STORIES</a></li>
+                            <li class="footer-menu__item"><a class="footer-menu__link" href="#">FEATURES
+                                    POST</a></li>
+                            <li class="footer-menu__item"><a class="footer-menu__link" href="#">POPULARS
+                                    NEWS</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-
-            <!-- footer widget -->
-            <div class="max-w-[300px]">
-                <h6
-                    class="font-semibold text-[18px] pb-[15px] mb-[30px] relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-[20px] before:bg-edyellow after:absolute after:bottom-0 after:left-[30px] after:h-[1.5px] after:w-[63px] after:bg-white">
-                    Newsletter</h6>
-
-                <div>
-                    <p class="text-[#d9d9d9]/80 mb-[21px]">Sign up to seargin weekly newsletter to get the latest
-                        updates.</p>
-
-                    <!-- newsltr form -->
-                    <form class="border border-white/20 rounded-full flex h-[56px] p-[4px]">
-                        <input type="email" name="email" placeholder="Enter Email Address"
-                            class="text-[14px] bg-transparent w-full rounded-full focus:outline-none px-[20px]">
-                        <button
-                            class="bg-edyellow rounded-full aspect-square flex items-center justify-center hover:bg-edpurple"><img
-                                src="{{ asset('/') }}assets/img/icon/submit-icon.svg" alt="icon"></button>
-                    </form>
-
-                    <!-- social links -->
-                    <div class="flex gap-[20px] mt-[30px]">
-                        <span
-                            class="pl-[30px] font-medium text-[#d9d9d9] relative before:absolute before:left-0 before:top-[50%] before:-translate-y-[50%] before:h-[1px] before:w-[20px] before:bg-[#d9d9d9]">Follow
-                            on</span>
-                        <span class="inline-flex gap-[16px] text-[#d9d9d9]">
-                            <a href="#" class="hover:text-edyellow"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="hover:text-edyellow"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a href="#" class="hover:text-edyellow"><i class="fa-brands fa-linkedin-in"></i></a>
-                            <a href="#" class="hover:text-edyellow"><i class="fa-brands fa-youtube"></i></a>
-                        </span>
+                <div class="col-md-4 offset-md-1 col-lg-3">
+                    <div class="footer-widget">
+                        <div class="address-widget">
+                            <a href="tel:+0000000000000">+88 000 345589</a>
+                            <a href="mailto:info@example.com">INFO@EXAMPLE.COM</a>
+                            <p>221B , Baker Street, Marylebone <br> London NW1 6XE, United Kingdom. </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- footer bottom -->
-        <div class="flex flex-wrap items-center justify-between gap-[15px] pt-[20px] pb-[50px] text-[#d9d9d9]">
-            <p>&copy; All Copyright 2024 by Edutics</p>
-
-            <div class="flex flex-wrap gap-[40px] xxs:gap-[15px]">
-                <a href="#" class="hover:text-edyellow">Terms & Conditions</a>
-                <a href="#" class="hover:text-edyellow">Privacy Policy</a>
+        <div class="footer-bottom">
+            <div class="row align-items-end">
+                <div class="col-md-3">
+                    <div class="footer-widget social-widget">
+                        <div class="social social--footer">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                                class="social__link" aria-label="Facebook account link">
+                                <i data-feather="facebook"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                                class="social__link" aria-label="Facebook account link">
+                                <i data-feather="instagram"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                                class="social__link" aria-label="Facebook account link">
+                                <i data-feather="linkedin"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social__link"
+                                aria-label="Facebook account link">
+                                <i data-feather="twitter"></i>
+                            </a>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social__link"
+                                aria-label="Facebook account link">
+                                <i data-feather="youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 offset-md-1 col-lg-2 offset-lg-2">
+                    <div class="footer-widget menu-two-widget">
+                        <ul class="footer-menu footer-menu--two">
+                            <li class="footer-menu__item"><a class="footer-menu__link" href="about-me.html">About Me</a>
+                            </li>
+                            <li class="footer-menu__item"><a class="footer-menu__link" href="contact.html">Contact With
+                                    Me</a></li>
+                            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Faq</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 offset-md-1">
+                    <div class="footer-widget">
+                        <p class="copyright-text">Copyright &copy; 2020, FATIMA</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </footer>
-<!-- FOOTER SECTION END -->
+<!-- Footer End -->
 
-<!-- js -->
-<script src="{{ asset('/') }}assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="{{ asset('/') }}assets/vendor/fslightbox/fslightbox.js"></script>
-<script src="{{ asset('/') }}assets/vendor/mixitup/mixitup.min.js"></script>
-<script src="{{ asset('/') }}assets/vendor/slim-select/slimselect.min.js"></script>
+<!-- Global Overlay Start -->
+<div class="global-overlay"></div>
+<!-- Global Overlay End -->
 
+<!-- Author OffCanvas Start -->
+<div class="offcanvas" id="author-offcanvas">
+    <div class="offcanvas__inner from-left">
+        <header class="offcanvas__header">
+            <div class="offcanvas__header-left">
+                <a href="index.html" class="d-block">
+                    <img src="{{ asset('/') }}assets/img/logo/logo.png" alt="Logo">
+                </a>
+            </div>
+            <div class="offcanvas__header-right">
+                <button class="btn-close" aria-label="Close author offcanvas">
+                    <i data-feather="x-circle"></i>
+                </button>
+            </div>
+        </header>
+        <div class="offcanvas__body">
+            <div class="author-offcanvas">
+                <figure class="author-offcanvas__figure">
+                    <img src="{{ asset('/') }}assets/img/others/author-1.jpg" alt="Fatima">
+                </figure>
+                <h3 class="author-offcanvas__title">Fatima Lima</h3>
+                <h5 class="author-offcanvas__tagline">Content Writter based on USA.</h5>
+                <p class="author-offcanvas__bio">I love to work with fun, also like watching movies and a food
+                    addicted person. I am a Web Developer with 5 years of experience. I have damn creative
+                    idea's at Front end design and Back end too</p>
+                <div class="social layout-2">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social__link"
+                        aria-label="Facebook account link">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social__link"
+                        aria-label="Facebook account link">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social__link"
+                        aria-label="Facebook account link">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social__link"
+                        aria-label="Facebook account link">
+                        <i data-feather="twitter"></i>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social__link"
+                        aria-label="Facebook account link">
+                        <i data-feather="youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Author OffCanvas End -->
+
+<!-- Mobile OffCanvas Start -->
+<div class="offcanvas" id="mobile-offcanvas">
+    <div class="offcanvas__inner from-right">
+        <header class="offcanvas__header">
+            <div class="offcanvas__header-left">
+                <a href="index.html" class="d-block">
+                    <img src="{{ asset('/') }}assets/img/logo/logo.png" alt="Logo">
+                </a>
+            </div>
+            <div class="offcanvas__header-right">
+                <button class="btn-close" aria-label="Close mobile menu offcanvas">
+                    <i data-feather="x-circle"></i>
+                </button>
+            </div>
+        </header>
+        <div class="offcanvas__body">
+            <div class="menu-offcanvas">
+                <ul class="mobile-menu">
+                    <li class="mobile-menu__item">
+                        <a href="index.html" class="mobile-menu__link active">
+                            Home
+                        </a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="#feature-posts" class="mobile-menu__link">
+                            Features
+                        </a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="about-me.html" class="mobile-menu__link">
+                            About Me
+                        </a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="contact.html" class="mobile-menu__link">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+                <div class="social layout-2 mt--80">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social__link"
+                        aria-label="Facebook account link">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social__link"
+                        aria-label="Facebook account link">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social__link"
+                        aria-label="Facebook account link">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social__link"
+                        aria-label="Facebook account link">
+                        <i data-feather="twitter"></i>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social__link"
+                        aria-label="Facebook account link">
+                        <i data-feather="youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mobile OffCanvas End -->
+
+<!-- Video Blog Modal Start -->
+<div class="modal fade" id="videoBlogModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i data-feather="x-circle"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/szITIfFR9c0"
+                        allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Video Blog Modal End -->
+</div>
+<!-- Main Wrapper End -->
+
+
+<a id="scrollToTOp"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-arrow-right">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+    </svg></a>
+
+
+<!-- ************************* JS Files ************************* -->
+
+<!-- Vendors -->
+<script src="{{ asset('/') }}assets/js/plugins.js"></script>
+
+<!-- Main JS -->
 <script src="{{ asset('/') }}assets/js/main.js"></script>
-<!-- <script src="{{ asset('/') }}assets/js/header-2.js"></script> -->
-<script src="{{ asset('/') }}assets/js/accordion.js"></script>
+
 </body>
 
 </html>
