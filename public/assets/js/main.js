@@ -1,276 +1,268 @@
-document.addEventListener("DOMContentLoaded", () => {
-    "use strict";
+(function ($) {
 
-    // FIXED HEADER =====
-    window.addEventListener("scroll", () => {
-        const toFixHeaders = document.querySelectorAll(".to-be-fixed");
-        toFixHeaders.forEach(toFixHeader => {
-            if (window.scrollY > 100) {
-                // document.body.style.paddingTop = toFixHeader.clientHeight + 'px';
-                toFixHeader.classList.add("ed-sticky");
-            } else {
-                // document.body.style.paddingTop = 0;
-                toFixHeader.classList.remove("ed-sticky");
-            }
-        })
-    });
-    //===== FIXED HEADER
+	'use strict';
 
-    // SIDEBAR JS START
-    const edSidebar = document.querySelector(".ed-sidebar");
-    const edSidebarOpenBtn = document.querySelector(".ed-header-sidebar-open-btn");
-    const edSidebarCloseBtn = document.querySelector(".ed-sidebar-close-btn");
-    const edOverlay = document.querySelector(".ed-overlay");
+	// Check if element exists
+	$.fn.elExists = function () {
+		return this.length > 0;
+	};
 
-    if (edSidebarOpenBtn) {
-        edSidebarOpenBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            edSidebar.classList.add("active");
-            edOverlay.classList.add("active");
-        });
-    }
-    edSidebarCloseBtn.addEventListener("click", () => {
-        edSidebar.classList.remove("active");
-        edOverlay.classList.remove("active");
-    });
+	// Variables
 
-    document.addEventListener("click", (e) => {
-        if (!edSidebar.contains(e.target) && edSidebar.classList.contains("active")) {
-            edSidebar.classList.remove("active");
-            edOverlay.classList.remove("active");
-        }
-    });
-    // SIDEBAR JS END
+	var $body = $('body'),
+		$overlay = $('.global-overlay');
 
 
-    // MOBILE MENU SIDEBAR
-    const edMobileMenuOpenBtn = document.querySelector(".ed-mobile-menu-open-btn");
-    const edMobileMenuContents = document.querySelectorAll(".to-go-to-sidebar-in-mobile");
-    const edMobileMenuContainer = document.querySelector(".ed-header-nav-in-mobile");
-    const edHeaderNavContainer = document.querySelector(".ed-header-nav-container");
-    const edHeaderNav = document.querySelectorAll(".ed-header-nav li");
-    if (window.innerWidth < 1200) {
-        edHeaderNav.forEach(edHeaderNavItem => {
-            edHeaderNavItem.addEventListener("click", () => {
-                edHeaderNavItem.classList.toggle("active");
-            });
-        });
-    };
 
-    if (window.innerWidth < 1200) {
-        edMobileMenuContents.forEach(edMobileMenuContent => {
-            edMobileMenuContainer.appendChild(edMobileMenuContent);
-        });
-    };
+	/***** Sticky Header *******/
 
-    window.addEventListener("resize", () => {
-        edMobileMenuContents.forEach(edMobileMenuContent => {
-            if (window.innerWidth < 1200) {
-                edMobileMenuContainer.appendChild(edMobileMenuContent);
-            }
-        });
-    });
-
-    edMobileMenuOpenBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        edSidebar.classList.add("active");
-        edOverlay.classList.add("active");
-    });
-    // MOBILE MENU SIDEBAR
+	function stickyHeader(selectors) {
+		var { main } = selectors;
+		var $headerPosition = (main.elExists()) ? main.offset().top : '';
+		var $mainHeaderHeight = (main.elExists()) ? main[0].getBoundingClientRect().height : 0;
+		var $headerTotalHeight = $headerPosition + $mainHeaderHeight;
 
 
-    // BANNER SLIDER JS START
-    new Swiper(".ed-banner-slider", {
-        slidesPerView: 1,
-        loop: true,
-        autoplay: true,
-        navigation: {
-            prevEl: ".ed-banner-slider .prev",
-            nextEl: ".ed-banner-slider .next",
-        }
-    });
-    // BANNER SLIDER JS END
+		$(window).on('scroll', function () {
+			var $scroll = $(window).scrollTop();
+			if ($scroll > $headerTotalHeight) {
+				main.addClass('is-sticky');
+			} else {
+				main.removeClass('is-sticky');
+			}
+		});
+	}
 
 
-    // GALLERY SLIDER JS START 
-    new Swiper(".ed-gallery-slider", {
-        slidesPerView: "auto",
-        centeredSlides: true,
-        loop: true,
-        spaceBetween: 30,
-        autoplay: true,
-    });
-    // GALLERY SLIDER JS END
 
 
-    // TESTIMONIAL SLIDER JS START
-    new Swiper(".ed-testimonial-slider", {
-        autoplay: true,
-        pagination: {
-            el: ".ed-testimonial-slider-pagination",
-            type: "fraction",
-        },
-        navigation: {
-            prevEl: ".ed-testimonial-slider-controls .prev",
-            nextEl: ".ed-testimonial-slider-controls .next",
-        }
-    });
-    // TESTIMONIAL SLIDER JS END
-
-    // PARTNER SLIDER JS START
-    new Swiper(".ed-partners-slider", {
-        slidesPerView: 2,
-        spaceBetween: 130,
-        autoplay: true,
-        breakpoints: {
-            0: { slidesPerView: 2, spaceBetween: 40, },
-            480: { slidesPerView: 3, spaceBetween: 90, },
-            576: { slidesPerView: 3, },
-            768: { slidesPerView: 4, },
-            1200: { slidesPerView: 5, },
-            1400: { slidesPerView: 6, }
-        }
-    });
-    // PARTNER SLIDER JS END
+	$(window).on('load', function () {
+		var mainSelectors = {
+			main: $('.header')
+		}
+		stickyHeader(mainSelectors);
+	});
 
 
-    // INDEX-2 COURSE FILTER JS
-    const ed2CoursesContainer = document.querySelector(".ed-2-courses-container");
-    if (ed2CoursesContainer) {
-        mixitup(ed2CoursesContainer);
-    };
 
-    // INDEX-2 EVENT SLIDER
-    new Swiper(".ed-2-events-slider", {
-        autoplay: true,
-        slidesPerView: 2,
-        spaceBetween: 30,
-        loop: true,
-        navigation: {
-            prevEl: ".ed-2-events-slider-nav .prev",
-            nextEl: ".ed-2-events-slider-nav .next",
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-            },
-            768: {
-                slidesPerView: 2,
-            }
-        }
-    });
+	/***** Toolbar Button Click Function *******/
 
-    // INDEX-2 TESTIMONIAL SLIDER
-    new Swiper(".ed-2-testimonial-slider", {
-        slidesPerView: "auto",
-        autoplay: true,
-        spaceBetween: 30,
-        loop: true,
-        navigation: {
-            prevEl: ".ed-2-testimonial-slider-nav .prev",
-            nextEl: ".ed-2-testimonial-slider-nav .next",
-        }
-    });
-
-    const ed2SearchCategory = document.querySelector('#ed-2-search-category');
-    if (ed2SearchCategory) {
-        new SlimSelect({
-            select: ed2SearchCategory,
-            settings: {
-                showSearch: false,
-            }
-        })
-    };
+	$('.js-toolbar-btn').on('click', function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+		var $this = $(this);
+		var target = $this.data('target');
+		$body.toggleClass('body-open');
+		$(target).toggleClass('open');
+		$($overlay).addClass('overlay-open');
+		$this.toggleClass('open');
+	});
 
 
-    // ABOUT PAGE PROGRAM SLIDER
-    new Swiper(".ed-program-slider", {
-        slidesPerView: 1,
-        spaceBetween: 15,
-        autoplay: true,
-        loop: true,
-        navigation: {
-            prevEl: ".ed-program-slider-nav .prev",
-            nextEl: ".ed-program-slider-nav .next",
-        },
-        breakpoints: {
-            480: {
-                slidesPerView: 2,
-            },
-            992: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-            },
-            1200: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-            },
-        }
-    });
+	/***** Document Click Function *******/
 
-    // TEACHER DETAILS PAGE TEACHERS SLIDER
-    new Swiper(".ed-teachers-slider", {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        autoplay: true,
-        loop: true,
-        navigation: {
-            prevEl: ".ed-teachers-slider-nav .prev",
-            nextEl: ".ed-teachers-slider-nav .next",
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-            },
-            480: {
-                slidesPerView: 2,
-            },
-            768: {
-                slidesPerView: 3,
-            },
-            992: {
-                spaceBetween: 30,
-            }
-        }
-    });
+	$body.on('click', function (e) {
+		var $target = e.target;
+		var dom = $('.wrapper').children();
+
+		if (!$($target).is('.js-toolbar-btn') && !$($target).parents().is('.open')) {
+			dom.removeClass('open');
+			$body.removeClass('body-open');
+			dom.find('.open').removeClass('open');
+			$overlay.removeClass('overlay-open');
+		}
+
+	});
 
 
-    // cart js
-    const edCartOpenerBtn = document.querySelector(".ed-cart-opener-btn");
-    const edCart = document.querySelector(".ed-cart-bar");
+	/***** Close Button Click Function *******/
 
-    if (edCartOpenerBtn) {
-        edCartOpenerBtn.addEventListener("click", () => {
-            edCart.classList.add("active");
-            edOverlay.classList.add("active");
-            document.body.style.overflow = "hidden";
-        });
-    };
+	$('.btn-close').on('click', function (e) {
+		e.preventDefault();
+		var $this = $(this);
+		$this.parents('.open').removeClass('open');
+		$($overlay).removeClass('overlay-open');
+	});
 
-    document.addEventListener("click", (e) => {
-        if (!edCart.contains(e.target) && edCart.classList.contains("active") && !edCartOpenerBtn.contains(e.target)) {
-            edCart.classList.remove("active");
-            edOverlay.classList.remove("active");
-            document.body.style.overflow = "";
-        }
-    });
+	/***** Contact Input Animation *******/
 
-    // search js
-    const edSearchOpenerBtn = document.querySelector(".ed-search-opener-btn");
-    const edSearch = document.querySelector(".ed-search");
+	$('.contact-form__input').on('change paste keyup', function (e) {
+		const val = $(this).val();
+
+		if (val) {
+			$(this).parent().addClass('has-value')
+		} else {
+			$(this).parent().removeClass('has-value')
+		}
+	})
+
+	/***** Feather Icons *******/
+
+	feather.replace();
 
 
-    if (edSearchOpenerBtn) {
-        edSearchOpenerBtn.addEventListener("click", () => {
-            edSearch.classList.add("active");
-            edOverlay.classList.add("active");
-        });
-    };
+	/***** Instagram Feed *******/
 
-    document.addEventListener("click", (e) => {
-        if (!edSearch.contains(e.target) && edSearch.classList.contains("active") && !edSearchOpenerBtn.contains(e.target)) {
-            edSearch.classList.remove("active");
-            edOverlay.classList.remove("active");
-        }
-    });
-});
+	$(window).on('load', function () {
+		$.instagramFeed({
+			'username': 'rainbowit10',
+			'container': "#instagram-feed",
+			'display_profile': false,
+			'display_biography': false,
+			'display_gallery': true,
+			'callback': null,
+			'styling': true,
+			'items': 6,
+			'items_per_row': 3,
+			'margin': 2,
+			'lazy_load': true,
+			'on_error': console.error
+		});
+
+		$.instagramFeed({
+			'username': 'rainbowit10',
+			'container': "#instagram-feed-2",
+			'display_profile': false,
+			'display_biography': false,
+			'display_gallery': true,
+			'callback': null,
+			'styling': false,
+			'items': 5,
+			'lazy_load': true,
+			'on_error': console.error
+		});
+	});
+
+
+	/***** MailChimp *******/
+
+	var subscribeUrl = $(".mc-form").attr('action');
+
+	$('.mc-form').ajaxChimp({
+		language: 'en',
+		url: subscribeUrl,
+		callback: mailChimpResponse
+	});
+
+	function mailChimpResponse(resp) {
+		if (resp.result === 'success') {
+			$('.mailchimp-success').html('' + resp.msg).fadeIn(900);
+			$('.mailchimp-error').fadeOut(400);
+			$(".mc-form").trigger('reset');
+		} else if (resp.result === 'error') {
+			$('.mailchimp-error').html('' + resp.msg).fadeIn(900);
+		}
+	}
+
+	/***** Feature Slider  *******/
+
+	new Swiper('.feature-slider', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		autoHeight: true,
+		autoplay: {
+			delay: 3000
+		},
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			1200: {
+				slidesPerView: 3,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			320: {
+				slidesPerView: 1
+			}
+		}
+	});
+
+	/***** Post Slider  *******/
+
+	new Swiper('.post-slider', {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		autoHeight: false,
+		autoplay: {
+			delay: 3000
+		}
+	})
+
+	/***** Contact Form Activation  *******/
+
+	$(function () {
+
+		// Get the form.
+		var form = $('#contact-form-active');
+
+		// Get the messages div.
+		var formMessages = $('.form-messege-active');
+
+		// Set up an event listener for the contact form.
+		$(form).submit(function (e) {
+			// Stop the browser from submitting the form.
+			e.preventDefault();
+
+			// Serialize the form data.
+			var formData = $(form).serialize();
+
+			// Submit the form using AJAX.
+			$.ajax({
+				type: 'POST',
+				url: $(form).attr('action'),
+				data: formData
+			})
+				.done(function (response) {
+					// Make sure that the formMessages div has the 'success' class.
+					$(formMessages).removeClass('error');
+					$(formMessages).addClass('success');
+
+					// Set the message text.
+					$(formMessages).text(response);
+
+					// Clear the form.
+					$('#contact-form input,#contact-form textarea').val('');
+				})
+				.fail(function (data) {
+					// Make sure that the formMessages div has the 'error' class.
+					$(formMessages).removeClass('success');
+					$(formMessages).addClass('error');
+
+					// Set the message text.
+					if (data.responseText !== '') {
+						$(formMessages).text(data.responseText);
+					} else {
+						$(formMessages).text('Oops! An error occured and your message could not be sent.');
+					}
+				});
+		});
+
+	});
+
+
+	function scrollToTop() {
+		var btn = $('#scrollToTOp');
+		$(window).scroll(function () {
+			if ($(window).scrollTop() > 300) {
+				btn.addClass('show');
+			} else {
+				btn.removeClass('show');
+			}
+		});
+		btn.on('click', function (e) {
+			e.preventDefault();
+			$('html, body').animate({
+				scrollTop: 0
+			}, '300');
+		});
+	}
+	scrollToTop();
+
+
+
+})(jQuery);
+
