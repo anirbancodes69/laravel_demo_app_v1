@@ -36,52 +36,6 @@
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="row align-items-end">
-                <div class="col-md-3">
-                    <div class="footer-widget social-widget">
-                        <div class="social social--footer">
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
-                                class="social__link" aria-label="Facebook account link">
-                                <i data-feather="facebook"></i>
-                            </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-                                class="social__link" aria-label="Facebook account link">
-                                <i data-feather="instagram"></i>
-                            </a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-                                class="social__link" aria-label="Facebook account link">
-                                <i data-feather="linkedin"></i>
-                            </a>
-                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social__link"
-                                aria-label="Facebook account link">
-                                <i data-feather="twitter"></i>
-                            </a>
-                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social__link"
-                                aria-label="Facebook account link">
-                                <i data-feather="youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 offset-md-1 col-lg-2 offset-lg-2">
-                    <div class="footer-widget menu-two-widget">
-                        <ul class="footer-menu footer-menu--two">
-                            <li class="footer-menu__item"><a class="footer-menu__link" href="about-me.html">About Me</a>
-                            </li>
-                            <li class="footer-menu__item"><a class="footer-menu__link" href="contact.html">Contact With
-                                    Me</a></li>
-                            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Faq</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4 offset-md-1">
-                    <div class="footer-widget">
-                        <p class="copyright-text">Copyright &copy; 2020, FATIMA</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </footer>
 <!-- Footer End -->
@@ -162,23 +116,23 @@
             <div class="menu-offcanvas">
                 <ul class="mobile-menu">
                     <li class="mobile-menu__item">
-                        <a href="index.html" class="mobile-menu__link active">
+                        <a href="{{ route('home') }}" class="mobile-menu__link active">
                             Home
                         </a>
                     </li>
                     <li class="mobile-menu__item">
-                        <a href="#feature-posts" class="mobile-menu__link">
-                            Features
-                        </a>
-                    </li>
-                    <li class="mobile-menu__item">
-                        <a href="about-me.html" class="mobile-menu__link">
+                        <a href="{{ route('about') }}" class="mobile-menu__link">
                             About Me
                         </a>
                     </li>
                     <li class="mobile-menu__item">
-                        <a href="contact.html" class="mobile-menu__link">
+                        <a href="{{ route('contact') }}" class="mobile-menu__link">
                             Contact
+                        </a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="{{ route('blog-detail') }}" class="mobile-menu__link">
+                            Blog Detail
                         </a>
                     </li>
                 </ul>
@@ -209,26 +163,6 @@
     </div>
 </div>
 <!-- Mobile OffCanvas End -->
-
-<!-- Video Blog Modal Start -->
-<div class="modal fade" id="videoBlogModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <i data-feather="x-circle"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/szITIfFR9c0"
-                        allowfullscreen=""></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Video Blog Modal End -->
 </div>
 <!-- Main Wrapper End -->
 

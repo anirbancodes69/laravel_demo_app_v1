@@ -26,6 +26,7 @@
                     <div class="feature-slider swiper-container">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
+                            {{-- FOREACH: START --}}
                             <!-- Slides -->
                             <div class="swiper-slide">
                                 <article class="blog blog--one">
@@ -48,110 +49,7 @@
                                     </div>
                                 </article>
                             </div>
-                            <div class="swiper-slide">
-                                <article class="blog blog--one blog--video">
-                                    <div class="blog__inner">
-                                        <div class="blog__media">
-                                            <div class="blog__video">
-                                                <figure class="blog__video-poster">
-                                                    <img src="{{ asset('/') }}assets/img/blog/blog-2-510x560.jpg"
-                                                        alt="Blog">
-                                                </figure>
-                                                <div class="blog__video-overlay">
-                                                    <button type="button" class="blog__video-btn" data-toggle="modal"
-                                                        data-target="#videoBlogModal">
-                                                        <i data-feather="play"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="blog__content">
-                                            <h2 class="blog__title">
-                                                <a href="single-blog.html">Video format blog title</a>
-                                            </h2>
-                                            <div class="blog__meta">
-                                                <a href="archive.html" class="blog__date">April 21, 2020</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="blog blog--one blog--gallery">
-                                    <div class="blog__inner">
-                                        <div class="blog__media">
-                                            <div class="blog__gallery">
-                                                <div class="post-slider swiper-container">
-                                                    <div class="swiper-wrapper">
-                                                        <div class="swiper-slide">
-                                                            <img src="{{ asset('/') }}assets/img/blog/blog-3-510x560.jpg"
-                                                                alt="blog">
-                                                        </div>
-                                                        <div class="swiper-slide">
-                                                            <img src="{{ asset('/') }}assets/img/blog/blog-4-510x560.jpg"
-                                                                alt="blog">
-                                                        </div>
-                                                        <div class="swiper-slide">
-                                                            <img src="{{ asset('/') }}assets/img/blog/blog-5-510x560.jpg"
-                                                                alt="blog">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="blog__content">
-                                            <h2 class="blog__title">
-                                                <a href="">Gallery format blog title</a>
-                                            </h2>
-                                            <div class="blog__meta">
-                                                <a href="archive.html" class="blog__date">April 21, 2020</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="blog blog--one">
-                                    <div class="blog__inner">
-                                        <div class="blog__media">
-                                            <figure class="blog__thumb">
-                                                <img src="{{ asset('/') }}assets/img/blog/blog-6-510x560.jpg"
-                                                    alt="blog thumb">
-                                            </figure>
-                                        </div>
-                                        <div class="blog__content">
-                                            <h2 class="blog__title">
-                                                <a href="single-blog.html">I wish to ask important eagerness
-                                                    to follow or never</a>
-                                            </h2>
-                                            <div class="blog__meta">
-                                                <a href="archive.html" class="blog__date">April 21, 2020</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="blog blog--one">
-                                    <div class="blog__inner">
-                                        <div class="blog__media">
-                                            <figure class="blog__thumb">
-                                                <img src="{{ asset('/') }}assets/img/blog/blog-7-510x560.jpg"
-                                                    alt="blog thumb">
-                                            </figure>
-                                        </div>
-                                        <div class="blog__content">
-                                            <h2 class="blog__title">
-                                                <a href="single-blog.html">the great times that we can
-                                                    choose the other choices</a>
-                                            </h2>
-                                            <div class="blog__meta">
-                                                <a href="archive.html" class="blog__date">April 21, 2020</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
+                            {{-- FOREACH: END --}}
                         </div>
 
                         <!-- If we need navigation buttons -->
@@ -179,81 +77,7 @@
                         <h2 class="section-title__main">MOST RECENT POST</h2>
                     </div>
                     <div class="recent-post-content">
-                        <article class="blog blog--two mb--50">
-                            <div class="blog__inner">
-                                <div class="blog__media">
-                                    <div class="blog__link">
-                                        <i data-feather="external-link"></i>
-                                        <a href="https://themeforest.net/user/rainbow-themes/portfolio" target="_blank"
-                                            rel="noopener noreferrer">https://themeforest.net/user/rainbow-themes/portfolio</a>
-                                    </div>
-                                </div>
-                                <div class="blog__content">
-                                    <header class="blog__header">
-                                        <a class="blog__category" href="archive.html">THEMEFOREST</a>
-                                        <h3 class="blog__title">
-                                            <a href="single-blog.html">Linked format blog title</a>
-                                        </h3>
-                                        <div class="blog__meta">
-                                            <div class="blog__meta-item">
-                                                <a href="archive.html">MARCH 26, 2020</a>
-                                            </div>
-                                            <div class="blog__meta-item">
-                                                <a href="single-blog.html" class="blog__comment">2
-                                                    Comments</a>
-                                            </div>
-                                        </div>
-                                    </header>
-                                    <p class="blog__excerpt">
-                                        This is useful, because plants require pollen of the same species to
-                                        propagate. While other bees may introduce pollen from different
-                                        plant species, the honeybee gu…
-                                    </p>
-                                    <footer class="blog__footer">
-                                        <a href="single-blog.html" class="blog__btn"><span>Read More <i
-                                                    data-feather="chevron-right"></i></span> </a>
-                                    </footer>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="blog blog--two mb--50">
-                            <div class="blog__inner">
-                                <div class="blog__media">
-                                    <blockquote class="blog__quote">
-                                        <i data-feather="paperclip"></i>
-                                        <h3>Courage is the first of human qualities because it is the
-                                            quality which gurantees the others</h3>
-                                        <footer>-Aristotle</footer>
-                                    </blockquote>
-                                </div>
-                                <div class="blog__content">
-                                    <header class="blog__header">
-                                        <a class="blog__category" href="archive.html">THEMEFOREST</a>
-                                        <h3 class="blog__title">
-                                            <a href="single-blog.html">Quote format blog title</a>
-                                        </h3>
-                                        <div class="blog__meta">
-                                            <div class="blog__meta-item">
-                                                <a href="archive.html">MARCH 26, 2020</a>
-                                            </div>
-                                            <div class="blog__meta-item">
-                                                <a href="single-blog.html" class="blog__comment">2
-                                                    Comments</a>
-                                            </div>
-                                        </div>
-                                    </header>
-                                    <p class="blog__excerpt">
-                                        This is useful, because plants require pollen of the same species to
-                                        propagate. While other bees may introduce pollen from different
-                                        plant species, the honeybee gu…
-                                    </p>
-                                    <footer class="blog__footer">
-                                        <a href="single-blog.html" class="blog__btn"><span>Read More <i
-                                                    data-feather="chevron-right"></i></span> </a>
-                                    </footer>
-                                </div>
-                            </div>
-                        </article>
+                        {{-- FOREACH: START --}}
                         <article class="blog blog--two mb--50">
                             <div class="blog__inner">
                                 <div class="blog__media">
@@ -290,173 +114,7 @@
                                 </div>
                             </div>
                         </article>
-                        <article class="blog blog--two mb--50">
-                            <div class="blog__inner">
-                                <div class="blog__media">
-                                    <div class="blog__video">
-                                        <figure class="blog__video-poster">
-                                            <img src="{{ asset('/') }}assets/img/blog/blog-2-510x350.jpg" alt="Blog">
-                                        </figure>
-                                        <div class="blog__video-overlay">
-                                            <button type="button" class="blog__video-btn" data-toggle="modal"
-                                                data-target="#videoBlogModal">
-                                                <i data-feather="play"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="blog__content">
-                                    <header class="blog__header">
-                                        <a class="blog__category" href="archive.html">THEMEFOREST</a>
-                                        <h3 class="blog__title">
-                                            <a href="single-blog.html">Video format blog title</a>
-                                        </h3>
-                                        <div class="blog__meta">
-                                            <div class="blog__meta-item">
-                                                <a href="archive.html">MARCH 26, 2020</a>
-                                            </div>
-                                            <div class="blog__meta-item">
-                                                <a href="single-blog.html" class="blog__comment">2
-                                                    Comments</a>
-                                            </div>
-                                        </div>
-                                    </header>
-                                    <p class="blog__excerpt">
-                                        This is useful, because plants require pollen of the same species to
-                                        propagate. While other bees may introduce pollen from different
-                                        plant species, the honeybee gu…
-                                    </p>
-                                    <footer class="blog__footer">
-                                        <a href="single-blog.html" class="blog__btn"><span>Read More <i
-                                                    data-feather="chevron-right"></i></span> </a>
-                                    </footer>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="blog blog--two mb--50">
-                            <div class="blog__inner">
-                                <div class="blog__media">
-                                    <figure class="blog__thumb">
-                                        <img src="{{ asset('/') }}assets/img/blog/blog-3-510x350.jpg" alt="Blog">
-                                        <a href="single-blog.html" class="overlay-link">Blog Title</a>
-                                    </figure>
-                                </div>
-                                <div class="blog__content">
-                                    <header class="blog__header">
-                                        <a class="blog__category" href="archive.html">THEMEFOREST</a>
-                                        <h3 class="blog__title">
-                                            <a href="single-blog.html">I wish to ask important eagerness to
-                                                follow or never</a>
-                                        </h3>
-                                        <div class="blog__meta">
-                                            <div class="blog__meta-item">
-                                                <a href="archive.html">MARCH 26, 2020</a>
-                                            </div>
-                                            <div class="blog__meta-item">
-                                                <a href="single-blog.html" class="blog__comment">2
-                                                    Comments</a>
-                                            </div>
-                                        </div>
-                                    </header>
-                                    <p class="blog__excerpt">
-                                        This is useful, because plants require pollen of the same species to
-                                        propagate. While other bees may introduce pollen from different
-                                        plant species, the honeybee gu…
-                                    </p>
-                                    <footer class="blog__footer">
-                                        <a href="single-blog.html" class="blog__btn"><span>Read More <i
-                                                    data-feather="chevron-right"></i></span> </a>
-                                    </footer>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="blog blog--two mb--50">
-                            <div class="blog__inner">
-                                <div class="blog__media">
-                                    <div class="blog__gallery">
-                                        <div class="post-slider swiper-container">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <img src="{{ asset('/') }}assets/img/blog/blog-4-510x350.jpg"
-                                                        alt="blog">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="{{ asset('/') }}assets/img/blog/blog-5-510x350.jpg"
-                                                        alt="blog">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="{{ asset('/') }}assets/img/blog/blog-6-510x350.jpg"
-                                                        alt="blog">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="blog__content">
-                                    <header class="blog__header">
-                                        <a class="blog__category" href="archive.html">THEMEFOREST</a>
-                                        <h3 class="blog__title">
-                                            <a href="single-blog.html">Gallery format blog title</a>
-                                        </h3>
-                                        <div class="blog__meta">
-                                            <div class="blog__meta-item">
-                                                <a href="archive.html">MARCH 26, 2020</a>
-                                            </div>
-                                            <div class="blog__meta-item">
-                                                <a href="single-blog.html" class="blog__comment">2
-                                                    Comments</a>
-                                            </div>
-                                        </div>
-                                    </header>
-                                    <p class="blog__excerpt">
-                                        This is useful, because plants require pollen of the same species to
-                                        propagate. While other bees may introduce pollen from different
-                                        plant species, the honeybee gu…
-                                    </p>
-                                    <footer class="blog__footer">
-                                        <a href="single-blog.html" class="blog__btn"><span>Read More <i
-                                                    data-feather="chevron-right"></i></span> </a>
-                                    </footer>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="blog blog--two mb--50">
-                            <div class="blog__inner">
-                                <div class="blog__media">
-                                    <figure class="blog__thumb">
-                                        <img src="{{ asset('/') }}assets/img/blog/blog-7-510x350.jpg" alt="Blog">
-                                        <a href="single-blog.html" class="overlay-link">Blog Title</a>
-                                    </figure>
-                                </div>
-                                <div class="blog__content">
-                                    <header class="blog__header">
-                                        <a class="blog__category" href="archive.html">THEMEFOREST</a>
-                                        <h3 class="blog__title">
-                                            <a href="single-blog.html">Now all manufacturers to achieve
-                                                because it is not a great film</a>
-                                        </h3>
-                                        <div class="blog__meta">
-                                            <div class="blog__meta-item">
-                                                <a href="archive.html">MARCH 26, 2020</a>
-                                            </div>
-                                            <div class="blog__meta-item">
-                                                <a href="single-blog.html" class="blog__comment">2
-                                                    Comments</a>
-                                            </div>
-                                        </div>
-                                    </header>
-                                    <p class="blog__excerpt">
-                                        This is useful, because plants require pollen of the same species to
-                                        propagate. While other bees may introduce pollen from different
-                                        plant species, the honeybee gu…
-                                    </p>
-                                    <footer class="blog__footer">
-                                        <a href="single-blog.html" class="blog__btn"><span>Read More <i
-                                                    data-feather="chevron-right"></i></span> </a>
-                                    </footer>
-                                </div>
-                            </div>
-                        </article>
+                        {{-- FOREACH: END --}}
                     </div>
                     <nav class="pagination-wrap">
                         <ul class="pagination">
@@ -512,6 +170,7 @@
                     <div class="widget mb--30">
                         <h3 class="widget__title">RECENT POSTS</h3>
                         <div class="recent-post">
+                            {{-- FOREACH: START --}}
                             <div class="recent-post__item">
                                 <article class="blog blog--three">
                                     <div class="blog__inner">
@@ -532,66 +191,7 @@
                                     </div>
                                 </article>
                             </div>
-                            <div class="recent-post__item">
-                                <article class="blog blog--three">
-                                    <div class="blog__inner">
-                                        <div class="blog__content">
-                                            <a href="archive.html" class="blog__date">MARCH 26, 2020</a>
-                                            <h4 class="blog__title">
-                                                <a href="single-blog.html">Now all manufacturers to achieve
-                                                    because it is not a great film</a>
-                                            </h4>
-                                        </div>
-                                        <div class="blog__media">
-                                            <figure class="blog__thumb">
-                                                <img src="{{ asset('/') }}assets/img/blog/blog-2-78x78.jpg" alt="Blog">
-                                                <a href="single-blog.html" class="overlay-link">Blog
-                                                    Link</a>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="recent-post__item">
-                                <article class="blog blog--three">
-                                    <div class="blog__inner">
-                                        <div class="blog__content">
-                                            <a href="archive.html" class="blog__date">MARCH 26, 2020</a>
-                                            <h4 class="blog__title">
-                                                <a href="single-blog.html">the choice is easy blinded to the
-                                                    needs of hardship</a>
-                                            </h4>
-                                        </div>
-                                        <div class="blog__media">
-                                            <figure class="blog__thumb">
-                                                <img src="{{ asset('/') }}assets/img/blog/blog-3-78x78.jpg" alt="Blog">
-                                                <a href="single-blog.html" class="overlay-link">Blog
-                                                    Link</a>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="recent-post__item">
-                                <article class="blog blog--three">
-                                    <div class="blog__inner">
-                                        <div class="blog__content">
-                                            <a href="archive.html" class="blog__date">MARCH 26, 2020</a>
-                                            <h4 class="blog__title">
-                                                <a href="single-blog.html">those who reject the troubles
-                                                    they exercise that is either</a>
-                                            </h4>
-                                        </div>
-                                        <div class="blog__media">
-                                            <figure class="blog__thumb">
-                                                <img src="{{ asset('/') }}assets/img/blog/blog-4-78x78.jpg" alt="Blog">
-                                                <a href="single-blog.html" class="overlay-link">Blog
-                                                    Link</a>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
+                            {{-- FOREACH: END --}}
                         </div>
                     </div>
                     <div class="widget widget--primary mb--30">
@@ -601,24 +201,14 @@
                     <div class="widget">
                         <h3 class="widget__title">CATEGORIES</h3>
                         <ul class="categories">
+                            {{-- FOREACH: START --}}
                             <li class="categories__item">
                                 <a href="archive.html" class="categories__link">
                                     <span class="text">themeforest</span>
                                     <span class="number">2</span>
                                 </a>
                             </li>
-                            <li class="categories__item">
-                                <a href="archive.html" class="categories__link">
-                                    <span class="text">themeforest</span>
-                                    <span class="number">2</span>
-                                </a>
-                            </li>
-                            <li class="categories__item">
-                                <a href="archive.html" class="categories__link">
-                                    <span class="text">themeforest</span>
-                                    <span class="number">2</span>
-                                </a>
-                            </li>
+                            {{-- FOREACH: END --}}
                         </ul>
                     </div>
                 </aside>
