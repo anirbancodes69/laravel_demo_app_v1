@@ -10,12 +10,6 @@
     <!-- Favicons -->
     <link rel="shortcut icon" href="{{ asset('/') }}assets/img/favicon.ico" type="image/x-icon">
 
-
-    <!-- Preload Links -->
-    <link rel="preconnect" href="https://api.instagram.com" crossorigin="anonymous">
-    <link rel="preconnect" href="../../../index.htm" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="anonymous">
-
     <!-- Google Fonts -->
     <link
         href="{{ asset('/') }}assets/css/css2?family=Marck+Script&family=Montserrat:wght@300;400;500;600;700&display=swap"
@@ -39,19 +33,14 @@
     <!-- Main Wrapper Start -->
     <div class="wrapper">
         <!-- Header Start -->
-        <header class="header header--transparent">
+        <header class="header">
             <div class="container">
                 <div class="header__main">
                     <div class="header__col header__col--left">
-                        <div class="header__element header__element--author-btn">
-                            <button class="hamburger js-toolbar-btn" data-target="#author-offcanvas" type="button"
-                                aria-label="click here to open author offcanvas">
-                                <span></span>
-                            </button>
-                        </div>
+
                         <div class="header__element header__element--logo">
                             <div class="logo">
-                                <a href="index.html" class="d-block">
+                                <a href="{{ route('home') }}" class="d-block">
                                     <img src="{{ asset('/') }}assets/img/logo/logo.png" alt="Logo" class="logo--dark">
                                     <img src="{{ asset('/') }}assets/img/logo/white-logo.png" alt="Logo"
                                         class="logo--white">
@@ -63,23 +52,23 @@
                         <nav class="header__element d-none d-lg-block">
                             <ul class="mainmenu">
                                 <li class="mainmenu__item">
-                                    <a href="index.html" class="mainmenu__link active">
+                                    <a href="{{ route('home') }}" class="mainmenu__link active">
                                         Home
                                     </a>
                                 </li>
                                 <li class="mainmenu__item">
-                                    <a href="#feature-posts" class="mainmenu__link">
-                                        Features
-                                    </a>
-                                </li>
-                                <li class="mainmenu__item">
-                                    <a href="about-me.html" class="mainmenu__link">
+                                    <a href="{{ route('about') }}" class="mainmenu__link">
                                         About Me
                                     </a>
                                 </li>
                                 <li class="mainmenu__item">
-                                    <a href="contact.html" class="mainmenu__link">
+                                    <a href="{{ route('contact') }}" class="mainmenu__link">
                                         Contact
+                                    </a>
+                                </li>
+                                <li class="mainmenu__item">
+                                    <a href="{{ route('blog-detail') }}" class="mainmenu__link">
+                                        Blog Detail
                                     </a>
                                 </li>
                             </ul>
